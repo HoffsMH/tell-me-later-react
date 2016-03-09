@@ -2,7 +2,7 @@
   "name": "tell-me-later-react",
   "version": "1.0.0",
   "description": "React front-end for tell-me-later-app",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
     "test": "test"
   },
