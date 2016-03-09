@@ -1,0 +1,31 @@
+.app-root:before {
+
+  content: "";
+  position: fixed;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  display: block;
+  background: linear-gradient(
+      rgba(0, 0, 0, 0.50),
+      rgba(0, 0, 0, 0.35)),
+      url("https://source.unsplash.com/category/nature/1600x900");
+  background-size: cover;
+  height: 100%;
+  color: white;
+
+  // -webkit-filter: blur(1px);
+  // -moz-filter: blur(1px);
+  // -o-filter: blur(1px);
+  // -ms-filter: blur(1px);
+  // filter: blur(1px);
+}
+
+.app-root {
+  position: fixed;
+  color: white;
+  height: 100%;
+  left: 0;
+  right: 0;
+  z-index: 0;
+}

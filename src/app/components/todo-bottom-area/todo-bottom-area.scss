@@ -1,0 +1,46 @@
+.todo-bottom-area {
+  display: flex;
+  // height: 450px;
+  .column {
+    flex-grow: 1;
+    .column-inner {
+      overflow-y: auto;
+      background: rgba(0,0,0, 0.65);
+      // border: solid white .5px;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      position: relative;
+      .preview-title {
+        margin-top: 0px;
+        border-bottom: solid #ccc 1px;
+        margin-bottom: 2px;
+      }
+      .preview-time {
+        margin-top: 2px;
+        font-weight: 300;
+      }
+      .preview-label {
+        font-size: 15px;
+        text-align: right;
+        font-weight: 300;
+      }
+    }
+    .todo-list-item {
+      border: solid #ccc 1px;
+      border-radius: 5px;
+      max-height: 20px;
+      overflow: hidden
+    }
+  }
+}
+
+
+
+@media (max-width : 992px) {
+  .todo-bottom-area {
+    display: block;
+    .column {
+    }
+  }
+}
