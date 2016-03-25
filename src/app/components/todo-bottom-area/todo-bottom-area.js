@@ -1,35 +1,24 @@
 const React       = require("react");
 const ReactDOM    = require("react-dom");
+const PreviewTodo = require("../preview-todo/preview-todo.js");
 
 var TodoBottomArea = React.createClass({
   render: function() {
     return <div className="todo-bottom-area row">
-    <div className="column col-md-6 hidden-sm hidden-xs">
-      <div className="column-inner">
-        <div className="preview-label">preview</div>
-        <h3 className="preview-title">Go Grocery Shopping</h3>
-        <div className="preview-time">7:03:03pm (tomorow at 3)</div>
-        <div>
-          <h2>asdfasfd</h2>
-          <ul>
-            <li>asdfas</li>
-            <li>asdfas adfasdf</li>
-            <li>asas</li>
-          </ul>
+      <PreviewTodo title={this.props.newTodo.title}
+                    showTime={this.props.newTodo.showTime}
+                    notes={this.props.newTodo.notes}/>
+      <div className="column col-md-6 col-sm-12">
+        <div className="column-inner">
+          <div className="preview-label">preview</div>
+          <h3 className="preview-title"> list</h3>
+          <div className="col-md-4 todo-list-item"> Here is a thing</div>
+          <div className="col-md-4 todo-list-item"> Here is a thing asdfsadfsadfasdfasdf sadf asdfsadfas dfasfddsfasfd </div>
+          <div className="col-md-4 todo-list-item"> Here is a thing</div>
+          <div className="col-md-4 todo-list-item"> Here is a thing </div>
+          <div className="col-md-4 todo-list-item"> Here is a thing</div>
         </div>
       </div>
-    </div>
-    <div className="column col-md-6 col-sm-12">
-      <div className="column-inner">
-        <div className="preview-label">preview</div>
-        <h3 className="preview-title"> list</h3>
-        <div className="col-md-4 todo-list-item"> Here is a thing</div>
-        <div className="col-md-4 todo-list-item"> Here is a thing asdfsadfsadfasdfasdf sadf asdfsadfas dfasfddsfasfd </div>
-        <div className="col-md-4 todo-list-item"> Here is a thing</div>
-        <div className="col-md-4 todo-list-item"> Here is a thing </div>
-        <div className="col-md-4 todo-list-item"> Here is a thing</div>
-      </div>
-    </div>
     </div>;
   }
 });

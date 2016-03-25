@@ -6,18 +6,24 @@ var NewTodo = React.createClass({
     return {title: '', showTime: '', notes: ''};
   },
   handleTitleChange: function(e) {
-    this.setState({title: e.target.value});
+    var value = e.target.value;
+    this.setState({title: value});
+    this.state.title = value;
     this.props.handleUpdate(this.state);
   },
   handleShowTimeChange: function(e) {
-    this.setState({showTime: e.target.value});
+    var value = e.target.value;
+    this.setState({showTime: value});
+    this.state.showTime = value;
     this.props.handleUpdate(this.state);
   },
   handleNotesChange: function(e) {
-    this.setState({notes: e.target.value});
+    var value = e.target.value;
+    this.setState({notes: value});
+    this.state.notes = value;
     this.props.handleUpdate(this.state);
   },
-  
+
   render: function() {
     return <div className="column col-md-6 col-sm-12">
         <div className="column-inner">
