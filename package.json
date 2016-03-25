@@ -4,7 +4,7 @@
   "description": "React front-end for tell-me-later-app",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "test",
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register",
     "webpack": "webpack --config config/webpack.js",
     "webpack-p": "webpack -p --config config/webpack.js",
     "webpack-watch": "webpack --config config/webpack.js --watch --colors",
@@ -39,6 +39,7 @@
     "babel-core": "^6.7.0",
     "babel-loader": "^6.2.4",
     "babel-preset-react": "^6.5.0",
+    "babel-register": "^6.7.2",
     "chai": "^3.5.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
