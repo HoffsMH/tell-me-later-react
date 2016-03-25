@@ -4,11 +4,14 @@
   "description": "React front-end for tell-me-later-app",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register",
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register scss:",
     "webpack": "webpack --config config/webpack.js",
     "webpack-p": "webpack -p --config config/webpack.js",
     "webpack-watch": "webpack --config config/webpack.js --watch --colors",
     "deploy": "cp -r dist/ ../tell-me-later/public/"
+  },
+  "babel": {
+    "presets": ["es2015", "react"]
   },
   "repository": {
     "type": "git",
@@ -43,6 +46,7 @@
     "chai": "^3.5.0",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
+    "jsdom": "^8.1.0",
     "mocha": "^2.4.5",
     "node-sass": "^3.4.2",
     "sass-loader": "^3.1.2",
