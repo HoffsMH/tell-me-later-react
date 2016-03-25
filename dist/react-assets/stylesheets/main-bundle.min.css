@@ -10,7 +10,8 @@ html, body, #react-app {
   .navbar a {
     color: #ffffff; }
   .navbar .navbar-brand {
-    font-size: 3em; }
+    font-size: 3em;
+    font-weight: 500; }
 .todo-top-area {
   border: none; }
   .todo-top-area label {
@@ -85,6 +86,8 @@ html, body, #react-app {
         .todo-top-area .column .column-inner .content-area textarea {
           height: calc(100% - 60px);
           margin-bottom: 10px; }
+.preview-title {
+  font-size: 33px; }
 .todo-bottom-area {
   display: flex; }
   .todo-bottom-area .column {
