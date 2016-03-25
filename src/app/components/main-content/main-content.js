@@ -11,7 +11,6 @@ var MainContent = React.createClass({
   },
   handleUpdateNew: function(todo) {
     this.setState({newTodo: todo});
-    console.log("we hit #handleUpdateNew");
     // console.log("title: " + arg1["title"]);
     // console.log("showTime: " + arg1["showTime"]);
     // console.log("notes: " + arg1["notes"]);

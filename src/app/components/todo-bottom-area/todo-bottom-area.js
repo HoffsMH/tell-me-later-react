@@ -11,12 +11,12 @@ var TodoBottomArea = React.createClass({
       <div className="column col-md-6 col-sm-12">
         <div className="column-inner">
           <div className="preview-label">preview</div>
-          <h3 className="preview-title"> list</h3>
-          <div className="col-md-4 todo-list-item"> Here is a thing</div>
-          <div className="col-md-4 todo-list-item"> Here is a thing asdfsadfsadfasdfasdf sadf asdfsadfas dfasfddsfasfd </div>
-          <div className="col-md-4 todo-list-item"> Here is a thing</div>
-          <div className="col-md-4 todo-list-item"> Here is a thing </div>
-          <div className="col-md-4 todo-list-item"> Here is a thing</div>
+          <h3 className="preview-title"> list of reminders</h3>
+          <div className="col-md-4 todo-list-item"> Here is a reminder</div>
+          <div className="col-md-4 todo-list-item"> Here is a reminder asdfsadfsadfasdfasdf sadf asdfsadfas dfasfddsfasfd </div>
+          <div className="col-md-4 todo-list-item"> Here is a reminder</div>
+          <div className="col-md-4 todo-list-item"> Here is a reminder </div>
+          <div className="col-md-4 todo-list-item"> Here is a reminder</div>
         </div>
       </div>
     </div>;

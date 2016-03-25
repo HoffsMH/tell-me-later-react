@@ -1,7 +1,11 @@
-const React = require("react");
+const React    = require("react");
 const ReactDOM = require("react-dom");
+const moment   = require("moment");
 
 var NavBar = React.createClass({
+  navBarTime: function() {
+    return moment().format('MMMM D h:mm:ss a');
+  },
   render: function() {
     return <nav className="navbar">
       <div className="container-fluid">
@@ -16,7 +20,7 @@ var NavBar = React.createClass({
           <a className="navbar-brand" href="#">Tell Me When</a>
           </div>
           <ul className="pull-right col-md-offset-1 nav navbar-nav navbar-left hidden-sm hidden-xs">
-          <li className=""><h3>7:02:03 PM</h3></li>
+          <li className=""><h3>{this.navBarTime()}</h3></li>
           </ul>
         </div>
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
