@@ -1,25 +1,11 @@
 const React       = require("react");
 const ReactDOM    = require("react-dom");
+const NewTodo     = require("../new-todo/new-todo.js");
 
 var TodoTopArea = React.createClass({
   render: function() {
     return <div className="todo-top-area row">
-      <div className="column col-md-6 col-sm-12">
-        <div className="column-inner">
-          <form>
-          <input type="text" placeholder="Title" className="title col-md-12"/>
-
-          <label>Tell Me:</label>
-          <input type="text" className="col-md-12" placeholder="...in 5 minutes,   ... tomorow at 3 AM,   ... in 3 days" />
-
-          <label>Additional: </label>
-          <div className="content-area">
-          <textarea placeholder="Markdown is valid here!" className="content"/>
-          <input type="submit" className="col-md-6 col-md-push-3"/>
-          </div>
-          </form>
-        </div>
-      </div>
+      <NewTodo handleUpdate={this.props.handleUpdateNew} />
       <div className="column col-md-6  col-sm-12">
         <div className="column-inner">
         <h3 className="preview-title">Go Grocery Shopping</h3>
