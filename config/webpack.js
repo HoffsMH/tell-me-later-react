@@ -9,7 +9,7 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, '../dist'),
-    filename: "[name]-bundle.min.js"
+    filename: "./react-assets/javascripts/[name]-bundle.min.js"
   },
   module: {
     loaders: [
@@ -22,7 +22,7 @@ module.exports = {
     ]
   },
   plugins: [
-        new ExtractTextPlugin("./assets/stylesheets/[name]-bundle.css")
+        new ExtractTextPlugin("./react-assets/stylesheets/[name]-bundle.min.css")
   ],
   resolve: {
     extensions: ['', '.js', '.json', '.scss', 'css']
