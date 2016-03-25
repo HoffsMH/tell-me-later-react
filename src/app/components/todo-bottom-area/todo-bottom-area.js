@@ -26,7 +26,7 @@ var TodoBottomArea = React.createClass({
         <div className="col-md-4 todo-list-item"> Here is a thing</div>
         <div className="col-md-4 todo-list-item"> Here is a thing asdfsadfsadfasdfasdf sadf asdfsadfas dfasfddsfasfd </div>
         <div className="col-md-4 todo-list-item"> Here is a thing</div>
-        <div className="col-md-4 todo-list-item"> Here is a thing asdfasdfasdf asdfasdf asdfasfd asdfasdfs df</div>
+        <div className="col-md-4 todo-list-item"> Here is a thing </div>
         <div className="col-md-4 todo-list-item"> Here is a thing</div>
       </div>
     </div>

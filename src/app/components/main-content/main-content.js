@@ -7,7 +7,7 @@ var MainContent = React.createClass({
   render: function() {
     return <div className="main-content container-fluid">
       <TodoTopArea />
-      <TodoBottomArea />
+      <TodoBottomArea/>
     </div>
   }
 });
