@@ -4,7 +4,11 @@
   "description": "React front-end for tell-me-later-app",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "test"
+    "test": "test",
+    "webpack": "webpack --config config/webpack.js",
+    "webpack-p": "webpack -p --config config/webpack.js",
+    "webpack-watch": "webpack --config config/webpack.js --watch --colors",
+    "deploy": "cp -r dist/ ../tell-me-later/public/"
   },
   "repository": {
     "type": "git",
@@ -22,5 +26,24 @@
   "bugs": {
     "url": "https://github.com/HoffsMH/tell-me-later-react/issues"
   },
-  "homepage": "https://github.com/HoffsMH/tell-me-later-react#readme"
+  "homepage": "https://github.com/HoffsMH/tell-me-later-react#readme",
+  "dependencies": {
+    "extract-text-webpack-plugin": "^1.0.1",
+    "jquery": "^2.2.1",
+    "jquery-ui": "^1.10.5",
+    "react": "^0.14.7",
+    "react-dom": "^0.14.7",
+    "webpack": "^1.12.14"
+  },
+  "devDependencies": {
+    "babel-core": "^6.7.0",
+    "babel-loader": "^6.2.4",
+    "babel-preset-react": "^6.5.0",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.5",
+    "node-sass": "^3.4.2",
+    "sass-loader": "^3.1.2",
+    "webpack": "^1.12.14",
+    "webpack-dev-server": "^1.14.1"
+  }
 }

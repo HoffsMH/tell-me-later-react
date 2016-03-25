@@ -1,0 +1,84 @@
+$placeholder-color: #666;
+.todo-top-area {
+  border: none;
+  label {
+    display: block;
+    font-size: 1.4em;
+  }
+  .column {
+    border: none;
+    .column-inner {
+      .tell-me-input {
+        width: calc(100% - 77px);
+        font-size: 1.3em;
+      }
+      h1, h2 {
+        margin-top: 0px;
+        margin-bottom: 2px;
+      }
+      overflow-y: auto;
+      background: rgba(0,0,0, 0.65);
+      // border: solid white .5px;
+      border: none;
+      border-radius: 5px;
+      padding: 10px;
+      position: relative;
+      input {
+        background: rgba(0,0,0, 0);
+        border: none;
+        border-bottom: solid #ccc .5px;
+        outline: none;
+        border-radius: 2px;
+        font-size: 1.3em;
+        margin-bottom: 5px;
+        color: #ccc;
+        font-weight: 300;
+      }
+      .title {
+        font-size: 2.2em;
+      }
+      input::-webkit-input-placeholder,
+        .tell-me::-webkit-input-placeholder,
+        .content::-webkit-input-placeholder,
+        .title::-webkit-input-placeholder { color: $placeholder-color; }
+      input::-moz-placeholder,
+        .tell-me::-moz-placeholder,
+        .content::-moz-placeholder,
+        .title::-moz-placeholder { color: $placeholder-color; }
+      input:-ms-input-placeholder,
+        .tell-me:-ms-input-placeholder,
+        .content:-ms-input-placeholder,
+        .title:-ms-input-placeholder { color: $placeholder-color; }
+      input:-moz-placeholder,
+        .tell-me:-moz-placeholder,
+        .content:-moz-placeholder,
+        .title:-moz-placeholder { color: $placeholder-color; }
+      textarea {
+        width: 100%;
+        height: 65%;
+        background: rgba(0,0,0, 0);
+        border-radius: 1px;
+        border: none;
+        border-top: solid #ccc .5px;
+        border-bottom: solid #ccc .5px;
+        outline: none;
+        resize: none;
+        font-size: 1em;
+        font-family: Consolas, "Liberation Mono", Menlo, Courier, monospace;
+      }
+      input[type="submit"] {
+        border: solid #ccc .5px;
+      }
+      .content-area {
+        position: absolute;
+        width: calc(100% - 20px);
+        height: calc(100% - 160px);
+        textarea {
+          height: calc(100% - 60px);
+          margin-bottom: 10px;
+        }
+        min-height: 60px;
+      }
+    }
+  }
+}
