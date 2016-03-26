@@ -31,7 +31,8 @@ var NewTodo = React.createClass({
           <input type="text"
                   placeholder="Title"
                   className="title col-md-12"
-                  onChange={this.handleTitleChange}/>
+                  onChange={this.handleTitleChange}
+                  value={this.props.title}/>
 
           <label>Tell Me:</label>
           <input type="text"
