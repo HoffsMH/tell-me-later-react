@@ -53,4 +53,26 @@ describe("new-todo component", () =>  {
       expect(wrapper.state().showTime).to.eq("new value");
     });
   });
+  context("when editing the notes field", () => {
+    before("each", () => {
+      sinon.spy(NewTodoMethods, "handleNotesChange");
+    });
+    it("calls handleNotesChange", () => {
+      const wrapper = mount(<NewTodo notes="test"
+                                     handleUpdate={TestHelper.noop}/>);
+
+      wrapper.find("textarea.content").simulate("change");
+
+      expect(NewTodoMethods.handleNotesChange.called).to.eq(true);
+    });
+    it("updates state", () => {
+      const wrapper = mount(<NewTodo notes="test"
+                                      handleUpdate={TestHelper.noop}/>);
+
+      wrapper.find("textarea.content").node.textContent = "new value";
+      wrapper.find("textarea.content").simulate("change");
+
+      expect(wrapper.state().notes).to.eq("new value");
+    });
+  });
 });

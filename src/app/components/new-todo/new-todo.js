@@ -44,7 +44,7 @@ var NewTodo = React.createClass({
           <div className="content-area">
           <textarea placeholder="Markdown is valid here!"
                       className="content"
-                      onKeyUp={this.handleNotesChange}/>
+                      onChange={this.handleNotesChange}/>
           <input type="submit" className="col-md-6 col-md-push-3"/>
           </div>
           </form>
