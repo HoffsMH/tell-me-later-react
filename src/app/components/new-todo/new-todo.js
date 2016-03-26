@@ -35,7 +35,7 @@ var NewTodo = React.createClass({
 
           <label>Tell Me:</label>
           <input type="text"
-                  className="col-md-12"
+                  className="show-time col-md-12"
                   placeholder="...in 5 minutes,   ... tomorow at 3 AM,   ... in 3 days"
                   onChange={this.handleShowTimeChange}/>
 
