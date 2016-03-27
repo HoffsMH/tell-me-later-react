@@ -4,7 +4,7 @@
   "description": "React front-end for tell-me-later-app",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha -R nyan --compilers js:babel-core/register,scss:./test/misc/null-compiler --require ./test/test-helper.js --recursive",
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register,scss:./test/misc/null-compiler --require ./test/test-helper.js --recursive",
     "webpack": "webpack --config config/webpack.js",
     "webpack-p": "webpack -p --config config/webpack.js",
     "webpack-watch": "webpack --config config/webpack.js --watch --colors",
@@ -51,6 +51,7 @@
     "babel-preset-react": "^6.5.0",
     "babel-register": "^6.7.2",
     "chai": "^3.5.0",
+    "enzyme": "^2.2.0",
     "es2015": "0.0.1",
     "extract-text-webpack-plugin": "^1.0.1",
     "file-loader": "^0.8.5",
@@ -59,6 +60,7 @@
     "node-sass": "^3.4.2",
     "react-addons-test-utils": "^0.14.7",
     "sass-loader": "^3.1.2",
+    "sinon": "^1.17.3",
     "webpack": "^1.12.14",
     "webpack-dev-server": "^1.14.1"
   }
