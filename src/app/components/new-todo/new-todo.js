@@ -11,7 +11,7 @@ var NewTodo = React.createClass({
       var value = e.target.value;
       state[type] = value;
       this.setState(state);
-      this.state.notes = value;
+      this.state[type] = value;
       this.props.handleUpdate(this.state);
     };
   },

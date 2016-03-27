@@ -5,12 +5,10 @@ const moment      = require("moment");
 const marked      = require("marked");
 
 var PreviewTodo = React.createClass({
-  componentDidMount: function() {
-
-  },
   renderShowTime: function() {
-    if (chrono.parseDate(this.props.showTime)) {
-      return chrono.parseDate(this.props.showTime).toString() + " ( " + this.props.showTime +" )";
+    var time = chrono.parseDate(this.props.showTime);
+    if (time) {
+      return moment(time).format('MMMM D h:mm:ss a') + " ( " + this.props.showTime +" )";
     } else if (this.props.showTime) {
       return "( " + this.props.showTime +" )";
     }
