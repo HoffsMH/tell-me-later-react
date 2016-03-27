@@ -13,6 +13,7 @@ describe("new-todo component", () =>  {
     before("each", () => {
       sinon.spy(NewTodoMethods, "handleTitleChange");
     });
+
     it("calls handleTitleChange", () => {
       const wrapper = mount(<NewTodo title="test" handleUpdate={TestHelper.noop}/>);
 
@@ -20,6 +21,7 @@ describe("new-todo component", () =>  {
 
       expect(NewTodoMethods.handleTitleChange.called).to.eq(true);
     });
+
     it("updates state", () => {
       const wrapper = mount(<NewTodo title="old value" handleUpdate={TestHelper.noop}/>);
 
@@ -33,6 +35,7 @@ describe("new-todo component", () =>  {
     before("each", () => {
       sinon.spy(NewTodoMethods, "handleShowTimeChange");
     });
+
     it("calls handleShowTimeChange", () => {
       const wrapper = mount(<NewTodo title="test"
                                      showTime="test"
@@ -42,6 +45,7 @@ describe("new-todo component", () =>  {
 
       expect(NewTodoMethods.handleShowTimeChange.called).to.eq(true);
     });
+
     it("updates state", () => {
       const wrapper = mount(<NewTodo title="old value"
                                       showTime="test"
@@ -57,6 +61,7 @@ describe("new-todo component", () =>  {
     before("each", () => {
       sinon.spy(NewTodoMethods, "handleNotesChange");
     });
+
     it("calls handleNotesChange", () => {
       const wrapper = mount(<NewTodo notes="test"
                                      handleUpdate={TestHelper.noop}/>);
@@ -65,6 +70,7 @@ describe("new-todo component", () =>  {
 
       expect(NewTodoMethods.handleNotesChange.called).to.eq(true);
     });
+
     it("updates state", () => {
       const wrapper = mount(<NewTodo notes="test"
                                       handleUpdate={TestHelper.noop}/>);
