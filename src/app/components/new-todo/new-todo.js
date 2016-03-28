@@ -1,23 +1,38 @@
 const React       = require("react");
 const ReactDOM    = require("react-dom");
+const AjaxHandler = require("../../lib/ajax-handler");
+const chrono      = require("chrono-node");
 
 var NewTodo = React.createClass({
   getInitialState: function() {
-    return {title: '', showTime: '', notes: ''};
+    return {
+      newTodo: {
+        title: '',
+        show_time: '',
+        content: ''
+      },
+      ajaxHandler: new AjaxHandler()
+    };
   },
   handleChange(type) {
     return (e) => {
-      var state = {};
+      var newState = {newTodo: this.state.newTodo};
       var value = e.target.value;
-      state[type] = value;
-      this.setState(state);
-      this.state[type] = value;
-      this.props.handleUpdate(this.state);
+      newState.newTodo[type] = value;
+      this.setState(newState);
+      this.state.newTodo[type] = value;
+      this.props.handleUpdate(this.state.newTodo);
     };
   },
-  handleShowTimeChange: function(e)  { this.handleChange("showTime")(e); },
-  handleNotesChange:    function(e)  { this.handleChange("notes")(e); },
+  handleShowTimeChange: function(e)  { this.handleChange("show_time")(e); },
+  handleNotesChange:    function(e)  { this.handleChange("content")(e); },
   handleTitleChange:    function(e)  { this.handleChange("title")(e); },
+  handleSubmit: function(e) {
+    e.preventDefault();
+    this.state.newTodo.show_time = chrono.parseDate(this.state.newTodo.show_time)
+    this.state.ajaxHandler.submitNew(this.state.newTodo);
+    this.getInitialState();
+  },
   render: function() {
     return <div className="column col-md-6 col-sm-12">
         <div className="column-inner">
@@ -42,7 +57,7 @@ var NewTodo = React.createClass({
                       className="content"
                       maxLength="500"
                       onChange={this.handleNotesChange}/>
-          <input type="submit" className="col-md-6 col-md-push-3"/>
+          <input type="submit" className="col-md-6 col-md-push-3" onClick={this.handleSubmit}/>
           </div>
           </form>
         </div>

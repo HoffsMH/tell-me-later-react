@@ -6,8 +6,8 @@ var TodoBottomArea = React.createClass({
   render: function() {
     return <div className="todo-bottom-area row">
       <PreviewTodo title={this.props.newTodo.title}
-                    showTime={this.props.newTodo.showTime}
-                    notes={this.props.newTodo.notes}/>
+                    show_time={this.props.newTodo.show_time}
+                    content={this.props.newTodo.content} />
       <div className="column col-md-6 col-sm-12">
         <div className="column-inner">
           <div className="preview-label">preview</div>
