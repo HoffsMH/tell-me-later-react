@@ -21,3 +21,5 @@ This is the react front-end for my tell-me-when app.
 * This repo must be in the same directory  as a clone of [this repo](https://github.com/HoffsMH/tell-me-later)
 * ``` npm run webpack-p ```
 * ``` npm run deploy ```
+
+[https://www.toptal.com/react/how-react-components-make-ui-testing-easy](https://www.toptal.com/react/how-react-components-make-ui-testing-easy)
