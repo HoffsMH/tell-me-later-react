@@ -25,6 +25,7 @@ var NewTodo = React.createClass({
           <input type="text"
                   placeholder="Title"
                   className="title col-md-12"
+                  maxLength="50"
                   onChange={this.handleTitleChange}
                   value={this.props.title}/>
 
@@ -32,12 +33,14 @@ var NewTodo = React.createClass({
           <input type="text"
                   className="show-time col-md-12"
                   placeholder="...in 5 minutes,   ... tomorow at 3 AM,   ... in 3 days"
+                  maxLength="50"
                   onChange={this.handleShowTimeChange}/>
 
           <label>Additional: </label>
           <div className="content-area">
           <textarea placeholder="Markdown is valid here!"
                       className="content"
+                      maxLength="500"
                       onChange={this.handleNotesChange}/>
           <input type="submit" className="col-md-6 col-md-push-3"/>
           </div>
