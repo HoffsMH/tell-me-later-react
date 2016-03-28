@@ -11,9 +11,6 @@ var MainContent = React.createClass({
   },
   handleUpdateNew: function(todo) {
     this.setState({newTodo: todo});
-    // console.log("title: " + arg1["title"]);
-    // console.log("showTime: " + arg1["showTime"]);
-    // console.log("notes: " + arg1["notes"]);
   },
   render: function() {
     return <div className="main-content container-fluid">

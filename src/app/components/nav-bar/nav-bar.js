@@ -3,7 +3,16 @@ const ReactDOM = require("react-dom");
 const moment   = require("moment");
 
 var NavBar = React.createClass({
+  getInitialState: function() {
+    return {currentTime: moment().format('MMMM D h:mm:ss a')};
+  },
+  componentDidMount: function() {
+    setInterval(() => {
+      this.setState({currentTime: moment().format('MMMM D h:mm:ss a')})
+    }, 100);
+  },
   navBarTime: function() {
+    // window.setInterval(function() {return moment().format('MMMM D h:mm:ss a')};, 1000);
     return moment().format('MMMM D h:mm:ss a');
   },
   render: function() {
@@ -19,17 +28,14 @@ var NavBar = React.createClass({
           </button>
           <a className="navbar-brand" href="#">Tell Me When</a>
           </div>
-          <ul className="pull-right col-md-offset-1 nav navbar-nav navbar-left hidden-sm hidden-xs">
-          <li className=""><h3>{this.navBarTime()}</h3></li>
-          </ul>
         </div>
         <div className="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul className="nav navbar-nav navbar-right">
-            <li><a href="./signin">Sign In</a></li>
+            <li className=""><h3>{this.state.currentTime}</h3></li>
           </ul>
         </div>
       </div>
-    </nav>
+    </nav>;
   }
 });
 
