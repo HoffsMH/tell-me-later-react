@@ -9,23 +9,20 @@ function AjaxHandler() {
     }
   });
 }
-AjaxHandler.prototype.submitNew = function(todo_item) {
-  todo_item.show_time =
+AjaxHandler.prototype.submitNew = function(todo_item, callback) {
   $.ajax({
-      url: "api/v1/todo_items",
-      method: "POST",
-      data: {
-              todo_item: todo_item
-            }
-    })
-    .then(function(data) {
-      console.log(data);
-      console.log(data.data);
-      console.log(data.data.todo_item);
-    })
-    .fail(function(data) {
-
-    });
-  };
+    url: "api/v1/todo_items",
+    method: "POST",
+    data: {
+      todo_item: todo_item
+    }
+  })
+  .then(function(data) {
+    callback(data);
+  })
+  .fail(function(data) {
+    callback(data);
+  });
+};
 
 module.exports = AjaxHandler;
