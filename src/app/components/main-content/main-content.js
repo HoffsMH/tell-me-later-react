@@ -6,7 +6,7 @@ const TodoBottomArea = require("../todo-bottom-area/todo-bottom-area");
 var MainContent = React.createClass({
   getInitialState: function() {
     return {
-      newTodo: {title: '', showTime: '', notes: ''}
+      newTodo: {title: '', show_time: '', content: ''}
     };
   },
   handleUpdateNew: function(todo) {
@@ -16,7 +16,7 @@ var MainContent = React.createClass({
     return <div className="main-content container-fluid">
       <TodoTopArea handleUpdateNew={this.handleUpdateNew} />
       <TodoBottomArea newTodo={this.state.newTodo}/>
-    </div>
+    </div>;
   }
 });
 

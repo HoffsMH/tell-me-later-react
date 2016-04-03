@@ -28,7 +28,7 @@ describe("new-todo component", () =>  {
       wrapper.find("input.title").node.value = "new value";
       wrapper.find("input.title").simulate("change");
 
-      expect(wrapper.state().title).to.eq("new value");
+      expect(wrapper.state().newTodo.title).to.eq("new value");
     });
   });
   context("when editing the showtime field", () => {
@@ -54,7 +54,7 @@ describe("new-todo component", () =>  {
       wrapper.find("input.show-time").node.value = "new value";
       wrapper.find("input.show-time").simulate("change");
 
-      expect(wrapper.state().showTime).to.eq("new value");
+      expect(wrapper.state().newTodo.show_time).to.eq("new value");
     });
   });
   context("when editing the notes field", () => {
@@ -78,7 +78,7 @@ describe("new-todo component", () =>  {
       wrapper.find("textarea.content").node.textContent = "new value";
       wrapper.find("textarea.content").simulate("change");
 
-      expect(wrapper.state().notes).to.eq("new value");
+      expect(wrapper.state().newTodo.content).to.eq("new value");
     });
   });
 });

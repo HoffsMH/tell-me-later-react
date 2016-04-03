@@ -8,11 +8,10 @@ var NavBar = React.createClass({
   },
   componentDidMount: function() {
     setInterval(() => {
-      this.setState({currentTime: moment().format('MMMM D h:mm:ss a')})
+      this.setState({currentTime: moment().format('MMMM D h:mm:ss a')});
     }, 100);
   },
   navBarTime: function() {
-    // window.setInterval(function() {return moment().format('MMMM D h:mm:ss a')};, 1000);
     return moment().format('MMMM D h:mm:ss a');
   },
   render: function() {

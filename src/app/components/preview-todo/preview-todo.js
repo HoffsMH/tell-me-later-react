@@ -6,11 +6,11 @@ const marked      = require("marked");
 
 var PreviewTodo = React.createClass({
   renderShowTime: function() {
-    var time = chrono.parseDate(this.props.showTime);
+    var time = chrono.parseDate(this.props.show_time);
     if (time) {
-      return moment(time).format('MMMM D h:mm:ss a') + " ( " + this.props.showTime +" )";
-    } else if (this.props.showTime) {
-      return "( " + this.props.showTime +" )";
+      return moment(time).format('MMMM D h:mm:ss a') + " ( " + this.props.show_time +" )";
+    } else if (this.props.show_time) {
+      return "( " + this.props.show_time +" )";
     }
   },
   rawMarkup: function(content) {
@@ -24,7 +24,7 @@ var PreviewTodo = React.createClass({
         <h3 className="preview-title">{this.props.title}</h3>
         <div className="preview-time">{this.renderShowTime()}</div>
         <div>
-          <span dangerouslySetInnerHTML={this.rawMarkup(this.props.notes)} />
+          <span dangerouslySetInnerHTML={this.rawMarkup(this.props.content)} />
         </div>
       </div>
     </div>;
