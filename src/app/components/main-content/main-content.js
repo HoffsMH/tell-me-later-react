@@ -1,5 +1,8 @@
 const React          = require("react");
 const ReactDOM       = require("react-dom");
+const chrono         = require("chrono-node");
+const AjaxHandler    = require("../../lib/ajax-handler");
+const ajaxHandler    = new AjaxHandler();
 const TodoTopArea    = require("../todo-top-area/todo-top-area");
 const TodoBottomArea = require("../todo-bottom-area/todo-bottom-area");
 
@@ -14,9 +17,15 @@ var MainContent = React.createClass({
   handleUpdateNew: function(todo) {
     this.setState({newTodo: todo});
   },
+  handleSubmitNew: function(todo) {
+    todo.show_time = chrono.parseDate(todo.show_time);
+    ajaxHandler.submitNew(todo);
+    this.handleUpdateNew(this.getInitialState().newTodo);
+  },
   render: function() {
     return <div className="main-content container-fluid">
       <TodoTopArea handleUpdateNew={this.handleUpdateNew}
+                   handleSubmitNew={this.handleSubmitNew}
                    currentTodo={this.state.currentTodo}/>
       <TodoBottomArea newTodo={this.state.newTodo}/>
     </div>;

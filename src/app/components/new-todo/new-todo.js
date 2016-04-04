@@ -1,7 +1,5 @@
 const React       = require("react");
 const ReactDOM    = require("react-dom");
-const AjaxHandler = require("../../lib/ajax-handler");
-const chrono      = require("chrono-node");
 
 var NewTodo = React.createClass({
   getInitialState: function() {
@@ -10,17 +8,16 @@ var NewTodo = React.createClass({
         title: '',
         show_time: '',
         content: ''
-      },
-      ajaxHandler: new AjaxHandler()
+      }
     };
   },
   handleChange(type) {
     return (e) => {
-      var newState = {newTodo: this.state.newTodo};
-      var value = e.target.value;
-      newState.newTodo[type] = value;
-      this.setState(newState);
+      var newState             = {newTodo: this.state.newTodo};
+      var value                = e.target.value;
+      newState.newTodo[type]   = value;
       this.state.newTodo[type] = value;
+      this.setState(newState);
       this.props.handleUpdate(this.state.newTodo);
     };
   },
@@ -29,17 +26,8 @@ var NewTodo = React.createClass({
   handleTitleChange:    function(e)  { this.handleChange("title")(e); },
   handleSubmit: function(e) {
     e.preventDefault();
-    this.props.handleSubmitNew(this.state.newTodo)
-    this.state.newTodo.show_time = chrono.parseDate(this.state.newTodo.show_time);
-    console.log(this.getInitialState());
-    try {
-      var output = this.state.ajaxHandler.submitNew(this.state.newTodo);
-    } catch(e) {
-      console.log("most likely trying to use this function on local");
-      console.log("here's the error: " + e);
-    }
+    this.props.handleSubmitNew(this.state.newTodo);
     this.setState(this.getInitialState());
-    this.props.handleUpdate(this.state.newTodo);
   },
   render: function() {
     return <div className="column col-md-6 col-sm-12">
