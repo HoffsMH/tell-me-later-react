@@ -8,6 +8,7 @@ $placeholder-color: #666;
   .column {
     border: none;
     .column-inner {
+      font-weight: 300;
       .tell-me-input {
         width: calc(100% - 77px);
         font-size: 1.3em;
@@ -15,6 +16,16 @@ $placeholder-color: #666;
       h1, h2 {
         margin-top: 0px;
         margin-bottom: 2px;
+      }
+      .current-title {
+        margin-top: 0px;
+        border-bottom: solid #ccc 1px;
+        margin-bottom: 2px;
+        font-size: 33px;
+      }
+      .current-show-time {
+        margin-top: 2px;
+        font-weight: 300;
       }
       overflow-y: auto;
       background: rgba(0,0,0, 0.65);

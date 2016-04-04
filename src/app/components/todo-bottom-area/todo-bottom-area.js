@@ -1,6 +1,7 @@
 const React       = require("react");
 const ReactDOM    = require("react-dom");
 const PreviewTodo = require("../preview-todo/preview-todo.js");
+const TodoList    = require("../todo-list/todo-list.js");
 
 var TodoBottomArea = React.createClass({
   render: function() {
@@ -8,17 +9,7 @@ var TodoBottomArea = React.createClass({
       <PreviewTodo title={this.props.newTodo.title}
                     show_time={this.props.newTodo.show_time}
                     content={this.props.newTodo.content} />
-      <div className="column col-md-6 col-sm-12">
-        <div className="column-inner">
-          <div className="preview-label">preview</div>
-          <h3 className=""> 0/3 Shown</h3>
-          <div className="col-md-4 todo-list-item"> Here is a reminder</div>
-          <div className="col-md-4 todo-list-item"> Here is a reminder asdfsadfsadfasdfasdf sadf asdfsadfas dfasfddsfasfd </div>
-          <div className="col-md-4 todo-list-item"> Here is a reminder</div>
-          <div className="col-md-4 todo-list-item"> Here is a reminder </div>
-          <div className="col-md-4 todo-list-item"> Here is a reminder</div>
-        </div>
-      </div>
+      <TodoList />
     </div>;
   }
 });
