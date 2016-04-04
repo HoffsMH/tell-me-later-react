@@ -17,9 +17,12 @@ var MainContent = React.createClass({
   handleUpdateNew: function(todo) {
     this.setState({newTodo: todo});
   },
+  handleUpdateList: function(code) {
+    var list = ajaxHandler.getList(code, this.setState);
+  },
   handleSubmitNew: function(todo) {
     todo.show_time = chrono.parseDate(todo.show_time);
-    ajaxHandler.submitNew(todo);
+    ajaxHandler.submitNew(todo, this.handleUpdateList);
     this.handleUpdateNew(this.getInitialState().newTodo);
   },
   render: function() {

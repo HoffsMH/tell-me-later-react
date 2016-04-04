@@ -8,8 +8,8 @@
     "webpack": "webpack --config config/webpack.js",
     "webpack-p": "webpack -p --config config/webpack.js",
     "webpack-watch": "webpack --config config/webpack.js --watch --colors",
-    "deploy": "cp -r dist/ ../tell-me-later/public/",
-    "dev-deploy": "npm run webpack; npm run deploy"
+    "deploy": "npm run webpack-p; cp -r dist/ ../tell-me-later/public/",
+    "dev-deploy": "npm run webpack; cp -r dist/ ../tell-me-later/public/"
   },
   "babel": {
     "presets": [
