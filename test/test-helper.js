@@ -9,6 +9,6 @@ global.navigator = {userAgent: 'node.js'};
 module.exports = {
   noop() {return null;},
   getMethods(reactClass) {
-    return reactClass.prototype.__reactAutoBindMap
+    return reactClass.prototype.__reactAutoBindMap;
   }
 };

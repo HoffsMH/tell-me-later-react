@@ -18,9 +18,8 @@ AjaxHandler.prototype.submitNew = function(todo_item, callback) {
         todo_item: todo_item
       }
     })
-    .then(function(data, data1, data2) {
-      // console.log(data);
-      // console.log(data1);
+    .then(function(data) {
+
       console.log(data);
       console.log("we are in submit New: " + data);
       callback(data);
