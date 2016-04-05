@@ -6,7 +6,8 @@ const CurrentTodo = require("../current-todo/current-todo.js");
 var TodoTopArea = React.createClass({
   render: function() {
     return <div className="todo-top-area row">
-      <NewTodo handleUpdate={this.props.handleUpdateNew} />
+      <NewTodo handleUpdate={this.props.handleUpdateNew}
+               handleSubmitNew={this.props.handleSubmitNew}/>
       <CurrentTodo title={this.props.currentTodo.title}
                    show_time={this.props.currentTodo.show_time}
                    content={this.props.currentTodo.content} />

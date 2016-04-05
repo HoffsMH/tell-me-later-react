@@ -8,8 +8,8 @@
     "webpack": "webpack --config config/webpack.js",
     "webpack-p": "webpack -p --config config/webpack.js",
     "webpack-watch": "webpack --config config/webpack.js --watch --colors",
-    "deploy": "cp -r dist/ ../tell-me-later/public/",
-    "dev-deploy": "npm run webpack; npm run deploy"
+    "deploy": "npm run webpack-p; cp -r dist/ ../tell-me-later/public/",
+    "dev-deploy": "npm run webpack; cp -r dist/ ../tell-me-later/public/"
   },
   "babel": {
     "presets": [
@@ -34,6 +34,7 @@
   },
   "homepage": "https://github.com/HoffsMH/tell-me-later-react#readme",
   "dependencies": {
+    "babel-core": "^6.7.4",
     "chrono": "^1.0.5",
     "chrono-node": "^1.1.6",
     "extract-text-webpack-plugin": "^1.0.1",
