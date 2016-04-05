@@ -1,8 +1,7 @@
 const React          = require("react");
 const ReactDOM       = require("react-dom");
 const chrono         = require("chrono-node");
-const AjaxHandler    = require("../../lib/ajax-handler");
-const ajaxHandler    = new AjaxHandler();
+const ajaxHandler    = require("../../lib/ajax-handler");
 const TodoTopArea    = require("../todo-top-area/todo-top-area");
 const TodoBottomArea = require("../todo-bottom-area/todo-bottom-area");
 
