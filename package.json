@@ -4,7 +4,7 @@
   "description": "React front-end for tell-me-later-app",
   "main": "./lib/index.js",
   "scripts": {
-    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register, scss:./test/misc/null-compiler --require ./test/test-helper.js --recursive",
+    "test": "./node_modules/mocha/bin/mocha --compilers js:babel-core/register,scss:./test/misc/null-compiler --require ./test/test-helper.js --recursive",
     "webpack": "webpack --config config/webpack.js",
     "webpack-p": "webpack -p --config config/webpack.js",
     "webpack-watch": "webpack --config config/webpack.js --watch --colors",
